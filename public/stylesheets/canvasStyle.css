@@ -1,0 +1,9 @@
+.cs {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    background-color: azure;
+    margin-left: 700px;
+}

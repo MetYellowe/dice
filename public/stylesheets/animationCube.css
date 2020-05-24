@@ -1,0 +1,276 @@
+@keyframes play1-1 {
+    from {
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+    }
+    20% {
+      transform: translate3d(200px, 100px, 0) rotate3d(1, 1, 0, 90deg);
+    }
+    50% {
+      transform: translate3d(500px, 250px, 0) rotate3d(1, 1, 0, 180deg);
+    }
+    80% {
+      transform: translate3d(800px, 400px, 0) rotate3d(1, 1, 0, 210deg);
+    }
+    to {
+      transform: translate3d(1000px, 410px, 0) rotate3d(1, 1, 0, 360deg);
+    }
+  }
+  .play1-1 {
+    animation-name: play1-1;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes play1-2 {
+    from {
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+    }
+    20% {
+      transform: translate3d(200px, 100px, 0) rotate3d(0, 1, 0, 45deg);
+    }
+    50% {
+      transform: translate3d(500px, 250px, 0) rotate3d(1, 0, 0, 90deg);
+    }
+    80% {
+      transform: translate3d(800px, 400px, 0) rotate3d(0, 1, 0, 135deg);
+    }
+    to {
+      transform: translate3d(1000px, 410px, 0) rotate3d(1, 0, 0, 180deg);
+    }
+  }
+  .play1-2 {
+    animation-name: play1-2;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes play1-3 {
+    from {
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+    }
+    20% {
+      transform: translate3d(200px, 100px, 0) rotate3d(0, 1, 0, -45deg);
+    }
+    50% {
+      transform: translate3d(500px, 250px, 0) rotate3d(1, 0, 0, 90deg);
+    }
+    80% {
+      transform: translate3d(1000px, 410px, 0) rotate3d(1, 0, 0, 180deg);
+    }
+    to {
+      transform: translate3d(800px, 400px, 0) rotate3d(0, 1, 0, -90deg);
+    }
+  }
+  .play1-3 {
+    animation-name: play1-3;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes play1-4 {
+    from {
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+    }
+    20% {
+      transform: translate3d(200px, 100px, 0) rotate3d(0, 1, 0, 45deg);
+    }
+    50% {
+      transform: translate3d(1000px, 410px, 0) rotate3d(1, 0, 0, 90deg);
+    }
+    80% {
+      transform: translate3d(800px, 400px, 0) rotate3d(1, 0, 0, 180deg);
+    }
+    to {
+      transform: translate3d(400px, 300px, 0) rotate3d(0, 1, 0, 90deg);
+    }
+  }
+  .play1-4 {
+    animation-name: play1-4;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes play1-5 {
+    from {
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+    }
+    20% {
+      transform: translate3d(300px, 10px, 0) rotate3d(0, 1, 0, 85deg);
+    }
+    50% {
+      transform: translate3d(500px, 50px, 0) rotate3d(1, 0, 0, -55deg);
+    }
+    80% {
+      transform: translate3d(600px, 110px, 0) rotate3d(0, 1, 0, 180deg);
+    }
+    to {
+      transform: translate3d(700px, 300px, 0) rotate3d(1, 0, 0, -90deg);
+    }
+  }
+  .play1-5 {
+    animation-name: play1-5;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes play1-6 {
+    from {
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+    }
+    20% {
+      transform: translate3d(200px, 10px, 0) rotate3d(0, 1, 0, 45deg);
+    }
+    50% {
+      transform: translate3d(500px, 50px, 0) rotate3d(1, 0, 0, 25deg);
+    }
+    80% {
+      transform: translate3d(700px, 110px, 0) rotate3d(0, 1, 0, 180deg);
+    }
+    to {
+      transform: translate3d(800px, 200px, 0) rotate3d(1, 0, 0, 90deg);
+    }
+  }
+  .play1-6 {
+    animation-name: play1-6;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes play2-1 {
+    from {
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+    }
+    20% {
+      transform: translate3d(-200px, 100px, 0) rotate3d(0, 1, 0, 90deg);
+    }
+    50% {
+      transform: translate3d(-500px, 250px, 0) rotate3d(1, 0, 0, 90deg);
+    }
+    80% {
+      transform: translate3d(-800px, 400px, 0) rotate3d(0, 1, 0, 360deg);
+    }
+    to {
+      transform: translate3d(-800px, 400px, 0) rotate3d(1, 0, 0, 360deg);
+    }
+  }
+  .play2-1 {
+    animation-name: play2-1;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes play2-2 {
+    from {
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+    }
+    20% {
+      transform: translate3d(-200px, 100px, 0) rotate3d(1, 1, 0, -45deg);
+    }
+    50% {
+      transform: translate3d(-500px, 250px, 0) rotate3d(1, 1, 0, -90deg);
+    }
+    80% {
+      transform: translate3d(-800px, 400px, 0) rotate3d(1, 1, 0, -135deg);
+    }
+    to {
+      transform: translate3d(-1000px, 450px, 0) rotate3d(1, 1, 0, -180deg);
+    }
+  }
+  .play2-2 {
+    animation-name: play2-2;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes play2-3 {
+    from {
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+    }
+    20% {
+      transform: translate3d(-200px, 100px, 0) rotate3d(1, 0, 0, -15deg);
+    }
+    50% {
+      transform: translate3d(-500px, 250px, 0) rotate3d(0, 1, 0, -30deg);
+    }
+    80% {
+      transform: translate3d(-800px, 400px, 0) rotate3d(1, 0, 0, -45deg);
+    }
+    to {
+      transform: translate3d(-1000px, 450px, 0) rotate3d(0, 1, 0, -90deg);
+    }
+  }
+  .play2-3 {
+    animation-name: play2-3;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes play2-4 {
+    from {
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+    }
+    20% {
+        transform: translate3d(-500px, 300px, 0) rotate3d(1, 0, 0, 90deg);
+      }
+    50% {
+        transform: translate3d(-500px, 250px, 0) rotate3d(1, 0, 0, 180deg);
+    }
+    80% {
+        transform: translate3d(-200px, 100px, 0) rotate3d(0, 1, 0, 45deg);
+    }
+    to {
+        transform: translate3d(-500px, 250px, 0) rotate3d(0, 1, 0, 90deg);
+    }
+  }
+  .play2-4 {
+    animation-name: play2-4;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes play2-5 {
+    from {
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+    }
+    20% {
+      transform: translate3d(-200px, 100px, 0) rotate3d(1, 0, 0, -45deg);
+    }
+    50% {
+      transform: translate3d(-500px, 250px, 0) rotate3d(0, 1, 0, -45deg);
+    }
+    80% {
+      transform: translate3d(-800px, 400px, 0) rotate3d(0, 1, 0, -45deg);
+    }
+    to {
+      transform: translate3d(-1000px, 450px, 0) rotate3d(1, 0, 0, -90deg);
+    }
+  }
+  .play2-5 {
+    animation-name: play2-5;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes play2-6 {
+    from {
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+    }
+    20% {
+      transform: translate3d(-200px, 100px, 0) rotate3d(1, 0, 0, 45deg);
+    }
+    50% {
+      transform: translate3d(-1000px, 450px, 0) rotate3d(0, 1, 0,90deg);
+    }
+    80% {
+      transform: translate3d(-800px, 350px, 0) rotate3d(0, 1, 0, 180deg);
+    }
+    to {
+      transform: translate3d(-500px, 250px, 0) rotate3d(1, 0, 0, 90deg);
+    }
+  }
+  .play2-6 {
+    animation-name: play2-6;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }

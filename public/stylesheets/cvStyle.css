@@ -1,0 +1,63 @@
+.h-1 {
+    position: absolute;
+    top: 20px;
+    left: 400px;
+    background-color: black;
+    color: whitesmoke;
+    font: 50px "Comic Sans MS";
+}
+
+.h-2 {
+    position: absolute;
+    top: 100px;
+    left: 500px;
+    background-color: black;
+    color: whitesmoke;
+    font: 25px "Comic Sans MS";
+}
+
+.table-style {
+    position: absolute;
+    top: 150px;
+    left: 350px;
+    border: 1px solid silver;
+    background-color: whitesmoke;
+}
+
+td, th {
+    width: max-content;
+    border: 2px solid silver;
+}
+
+.about-me {
+    position: absolute;
+    top: 270px;
+    left: 250px;
+    background-color: black;
+    font: 15px "Comic Sans MS";
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+}
+
+.links-on-projects {
+    position: absolute;
+    top: 370px;
+    left: 110px;
+    background-color: black;
+    font: 15px "Comic Sans MS";
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+}
+
+.partnership {
+    position: absolute;
+    top: 570px;
+    left: 130px;
+    background-color: red;
+    font: 15px "Comic Sans MS";
+    color: black;
+    text-align: center;
+    padding: 5px;
+}

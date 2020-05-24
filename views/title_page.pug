@@ -1,0 +1,69 @@
+extends layout
+
+block content
+  
+  h1(class='h-1') #{title}
+
+  form(method='POST', action='')
+    div.form-group
+      label(for='name') Nickname:
+      input#name.form-control(type='text', class='nick-input', placeholder='Lucky Guy', name='name', value=(undefined===gamer ? '' : gamer.name))
+      label(for='password') Password:
+      input#password.form-control(type='password', class='pass-input', placeholder='Type password', name='password', value=(undefined===gamer ? '' : gamer.password))
+      table(id='opponents')
+        th(colspan='3') Choose Your Opponent
+        tr
+          td
+            img(src='/images/corsair.jpg')
+            br
+            input#opponent.form-control(type='radio' name='opponent' value='Corsair' )
+            label(for='corsair') Corsair
+          td
+            img(src='/images/gangster.jpg')
+            br
+            input#opponent.form-control(type='radio' name='opponent' value='Gangster' )
+            label(for='gangster') Bronx Gangster
+          td
+            img(src='/images/courtesan.jpg')
+            br
+            input#opponent.form-control(type='radio' name='opponent' value='Courtesan' )
+            label(for='courtesan') Courtesan
+        tr
+          td
+            img(src='/images/legionary.jpg')
+            br
+            input#opponent.form-control(type='radio' name='opponent' value='Legionary' )
+            label(for='legionary') Roman Legionary
+          td
+            img(src='/images/stranger.jpg')
+            br
+            input#opponent.form-control(type='radio' name='opponent' value='Stranger' )
+            label(for='stranger') Stranger from Roadside Tavern
+          td
+            img(src='/images/adventuress.jpg')
+            br
+            input#opponent.form-control(type='radio' name='opponent' value='Adventuress' ) 
+            label(for='lucky') Adventuress
+        button.btn.btn-primary(type='submit') Submit
+
+  div(id='ib', class='info-block-style')
+    div(id='ab', class='article-block-style' hidden)
+      article
+        header
+          h1(class='headline') Author Information
+          div(class='byline')
+            address(class='author') By 
+              a(rel='author', href='http://localhost:3000/catalog/cv', class='cv-link-style') Alexander Gorpinich
+            time(pubdate datetime='2020-05-15', title='May 15th, 2020') 5/15/20
+          div(class='article-content')
+
+  div(id='tassel', class='tassel-style')
+    span(id='tb', class='tassel-text-style') Expand
+  footer(class='footer-style')
+   small Copyright &copy; 2020 Alexander Gorpinich. All rights reserved.
+  
+
+  if errors
+    ul
+      for error in errors
+        li!= error.msg

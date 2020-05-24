@@ -1,0 +1,12 @@
+.pointWhite {
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: white;
+}
+.pointBlack {
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: black;
+}

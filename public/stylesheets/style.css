@@ -1,0 +1,141 @@
+body {
+  padding: 10px;
+  font: 14px "Comic Sans MS", Helvetica, Arial, sans-serif;
+  background-image: url(/images/wallpapersTitlePage.jpg);
+  color: whitesmoke;
+}
+
+.h-1 {
+  margin-bottom: 20px;
+  color: blanchedalmond;
+}
+
+.nick-input {
+  margin: 20px;
+}
+
+.pass-input {
+  margin: 20px;
+}
+
+.info-block-style {
+  position: absolute;
+  top: 0;
+  left: 1280px;
+  width: 69px;
+  height: 800px;
+  background-color: gray;
+}
+
+.tassel-style {
+  position: absolute;
+  top: 375px;
+  left: 1230px;
+  width: 50px;
+  height: 50px;
+  border: 10px solid black;
+  border-top-left-radius: 90px;
+  border-bottom-left-radius: 90px;
+  background-color: gray;
+  color: whitesmoke;
+  font: 14px "Comic Sans MS", Helvetica, Arial, sans-serif;
+}
+
+.tassel-text-style {
+  position: absolute;
+  top: 13px;
+  background-color: black;
+}
+
+@keyframes expand {
+  from {
+    width: 69px;
+    left: 1280px;
+  }
+  to {
+    width: 500px;
+    left: 849px;
+  }
+}
+
+.expand {
+  animation-name: expand;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes roll-up {
+  from {
+    width: 500px;
+    left: 880px;
+  }
+  to {
+    width: 69px;
+    left: 1280px;
+  }
+}
+
+.roll-up {
+  animation-name: roll-up;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes expand-tassel {
+  from {
+    left: 1230px;
+  }
+  to {
+    left: 799px;
+  }
+}
+
+.expand-tassel {
+  animation-name: expand-tassel;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes roll-up-tassel {
+  from {
+    left: 799px;
+  }
+  to {
+    left: 1230px;
+  }
+}
+
+.roll-up-tassel {
+  animation-name: roll-up-tassel;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.footer-style {
+  position: absolute;
+  top: 780px;
+  left: 500px;
+  background-color: black;
+}
+
+.article-block-style {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  width: 300px;
+  height: 200px;
+  background-color: black;
+  border: 5px solid whitesmoke;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.cv-link-style {
+  color: silver;
+  font: 20px "Comic Sans MS";
+  text-decoration: none;
+}

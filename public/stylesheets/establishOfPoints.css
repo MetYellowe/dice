@@ -1,0 +1,60 @@
+.center-point {
+    position: absolute;
+    top: 42px;
+    left: 43px;
+}
+.top-left-point {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.bottom-right-point {
+    position: absolute;
+    top: 65px;
+    left: 65px;
+}
+.top-point {
+    position: absolute;
+    top: 35px;
+    left: 42px;
+  }
+.left-point {
+    position: absolute;
+    top: 55px;
+    left: 30px;
+}
+.right-point {
+    position: absolute;
+    top: 55px;
+    left: 54px;
+}
+.left-top-point {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+.center-top-point {
+    position: absolute;
+    top: 20px;
+    left: 42px;
+}
+.right-top-point {
+    position: absolute;
+    top: 20px;
+    left: 69px;
+}
+.left-bottom-point {
+    position: absolute;
+    top: 65px;
+    left: 14px;
+}
+.center-bottom-point {
+    position: absolute;
+    top: 65px;
+    left: 41px;
+}
+.right-bottom-point {
+    position: absolute;
+    top: 65px;
+    left: 68px;
+}

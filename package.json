@@ -31,5 +31,7 @@
     "@babel/core": "^7.9.0",
     "@babel/node": "^7.8.7"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }

@@ -6,8 +6,6 @@ window.onload = function() {
 var listener = function(e) {
 
   if(e.keyCode == 13) {
-    
-    infoMessage.setAttribute('hidden', true);
 
     removePreviousAnimation();
 
@@ -17,8 +15,8 @@ var listener = function(e) {
 
     setTimeout(()=> {
       resultOfGame.makeChangeOfScrore();
-      coin.createCoin1(count);
-      coin.createCoin2(count);
+      coin.createCoin1();
+      coin.createCoin2();
     }, 5000);
 
   }
@@ -186,18 +184,13 @@ var coin = {
       }
     
     },
-    countCoin1: 0,
-    countCoin2: 0,
     createCoin1: function() {
-        if(this.ti1() == 3 && this.countCoin1 == 0) {
-          soundCoin2.play();
+        if(this.ti1() == 3) {
+          soundCoin1.play();
           this.blueprintOfCoin(320);
-          this.countCoin1 = 6;
-          console.log(this.createCoin1());
-        } else if(this.ti1() == 6 && this.countCoin1 == 6) {
-          soundCoin2.play();
+        } else if(this.ti1() == 6) {
+          soundCoin1.play();
           this.blueprintOfCoin(440);
-          this.countCoin1 = 0;
         } else if(this.ti1() == 9 && this.ti2() != 9) {
           soundCoin1.play();
           this.blueprintOfCoin(560);
@@ -208,22 +201,20 @@ var coin = {
         }
     },
     createCoin2: function() {
-      if(this.ti2() == 3 && this.countCoin2 == 0) {
-          soundCoin2.play();
-          this.blueprintOfCoin(950);
-          this.countCoin2 = 6;
-      } else if(this.ti2() == 6 && this.countCoin2 == 6) {
-          soundCoin2.play();
-          this.blueprintOfCoin(830);
-          this.countCoin2 = 0;
+      if(this.ti2() == 3) {
+        soundCoin2.play();
+        this.blueprintOfCoin(950);
+      } else if(this.ti2() == 6) {
+        soundCoin2.play();
+        this.blueprintOfCoin(830);
       } else if(this.ti2() == 9 && this.ti1() != 9) {
-          soundCoin2.play();
-          this.blueprintOfCoin(710);
-          this.awardCeremony(nickPlace2);
+        soundCoin2.play();
+        this.blueprintOfCoin(710);
+        this.awardCeremony(nickPlace2);
       } else if(this.ti2() == 9 && this.ti1() == 9) {
-          soundCoin2.play();
-          this.blueprintOfCoin(710);
-          this.awardCeremony();
+        soundCoin2.play();
+        this.blueprintOfCoin(710);
+        this.awardCeremony();
       }
   }
 };

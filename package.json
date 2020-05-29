@@ -25,7 +25,8 @@
     "mongoose": "^5.9.4",
     "morgan": "^1.9.1",
     "pug": "^2.0.0-beta11",
-    "ws": "^7.2.3"
+    "ws": "^7.2.3",
+    "amdefine": "6.13.4"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

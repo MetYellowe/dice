@@ -7,7 +7,7 @@ var listener = function(e) {
 
   if(e.keyCode == 13) {
     
-    infoMessage.remove();
+    infoMessage.setAttribute('hidden', true);
 
     removePreviousAnimation();
 

@@ -6,10 +6,10 @@ window.onload = function() {
 var listener = function(e) {
 
   if(e.keyCode == 13) {
-    
-    infoMessage.setAttribute('hidden', true);
 
     removePreviousAnimation();
+
+    infoMessage.setAttribute('hidden', true);
 
     addAnimation();
     
@@ -26,6 +26,7 @@ var listener = function(e) {
 }
 
 document.addEventListener('keydown', listener);
+startGameButton.addEventListener('click', listener);
 
 function addAnimation() {
 
@@ -128,6 +129,7 @@ var coin = {
     awardCeremony: function(nickPlace) {
 
       document.removeEventListener('keydown', listener);
+      startGameButton.removeEventListener('click', listener);
 
       var wiw1 = this.ti1();
       var wiw2 = this.ti2();
@@ -225,7 +227,7 @@ var coin = {
           this.blueprintOfCoin(710);
           this.awardCeremony();
       }
-  }
+    }
 };
 
 nicknameAppearance = {

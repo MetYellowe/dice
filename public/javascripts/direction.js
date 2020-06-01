@@ -17,22 +17,46 @@ var listener = function(e) {
 
     setTimeout(()=> {
       resultOfGame.makeChangeOfScrore();
-      coin.createCoin1(count);
-      coin.createCoin2(count);
+      coin.createCoin1();
+      coin.createCoin2();
     }, 5000);
 
   }
 
-}
+};
 
-document.addEventListener('keydown', listener);
-startGameButton.addEventListener('click', listener);
+var listener1 = function() {
+
+    removePreviousAnimation();
+
+    infoMessage.setAttribute('hidden', true);
+
+    addAnimation();
+    
+    soundOfDice();
+
+    setTimeout(()=> {
+      resultOfGame.makeChangeOfScrore();
+      coin.createCoin1();
+      coin.createCoin2();
+    }, 5000);
+
+};
+
+document.addEventListener('keypress', listener);
+document.addEventListener('click', listener1);
 
 function addAnimation() {
 
-  document.removeEventListener('keydown', listener);
+  document.removeEventListener('keypress', listener);
+  document.removeEventListener('click', listener1);
+
   setTimeout(function() {
-    document.addEventListener('keydown', listener);
+    document.addEventListener('keypress', listener);
+  }, 5000);
+
+  setTimeout(function() {
+    document.addEventListener('click', listener1);
   }, 5000);
 
   function getRandomInt(max) {
@@ -128,8 +152,8 @@ var coin = {
     },
     awardCeremony: function(nickPlace) {
 
-      document.removeEventListener('keydown', listener);
-      startGameButton.removeEventListener('click', listener);
+      document.removeEventListener('keypress', listener);
+      document.removeEventListener('click', listener1);
 
       var wiw1 = this.ti1();
       var wiw2 = this.ti2();

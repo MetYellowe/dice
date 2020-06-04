@@ -3,7 +3,13 @@ extends layout
 block content
   
   h1(class='h-1') #{title}
-
+  h2(class='h-2') #{message}
+  ul(class='ul-error')
+    //each val in errors
+      each v, k in val
+        if k == msg
+          li= v
+  
   form(method='POST', action='')
     div.form-group
       label(for='name') Nickname:
@@ -14,33 +20,33 @@ block content
         th(colspan='3') Choose Your Opponent
         tr
           td
-            img(src='/images/corsair.jpg')
+            img(src='/images/corsair.jpg' alt='corsair')
             br
-            input#opponent.form-control(type='radio' name='opponent' value='Corsair' )
+            input#opponent.form-control(type='radio' name='opponent' value='Corsair')
             label(for='corsair') Corsair
           td
-            img(src='/images/gangster.jpg')
+            img(src='/images/gangster.jpg' alt='gangster')
             br
             input#opponent.form-control(type='radio' name='opponent' value='Gangster' )
-            label(for='gangster') Bronx Gangster
+            label(for='gangster') Gangster
           td
-            img(src='/images/courtesan.jpg')
+            img(src='/images/viking.png' alt='viking')
             br
-            input#opponent.form-control(type='radio' name='opponent' value='Courtesan' )
-            label(for='courtesan') Courtesan
+            input#opponent.form-control(type='radio' name='opponent' value='Viking' )
+            label(for='viking') Viking
         tr
           td
-            img(src='/images/legionary.jpg')
+            img(src='/images/legionary.jpg' alt='legionary')
             br
             input#opponent.form-control(type='radio' name='opponent' value='Legionary' )
             label(for='legionary') Roman Legionary
           td
-            img(src='/images/stranger.jpg')
+            img(src='/images/stranger.jpg' alt='stranger')
             br
             input#opponent.form-control(type='radio' name='opponent' value='Stranger' )
             label(for='stranger') Stranger from Roadside Tavern
           td
-            img(src='/images/adventuress.jpg')
+            img(src='/images/adventuress.jpg' alt='adventuress')
             br
             input#opponent.form-control(type='radio' name='opponent' value='Adventuress' ) 
             label(for='lucky') Adventuress
@@ -53,7 +59,7 @@ block content
           h1(class='headline') Author Information
           div(class='byline')
             address(class='author') By 
-              a(rel='author', href='http://localhost:3000/catalog/cv', class='cv-link-style') Alexander Gorpinich
+              a(rel='author', href='/catalog/cv', class='cv-link-style') Alexander Gorpinich
             time(pubdate datetime='2020-05-15', title='May 15th, 2020') 5/15/20
           div(class='article-content')
 

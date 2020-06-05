@@ -8,8 +8,6 @@ var helmet = require('helmet');
 
 var indexRouter = require('./routes/index');
 var catalogRouter = require('./routes/catalog');
-// var tpd = require('./controllers/secondNick');
-// var d = require('./controllers/d');
 
 var app = express();
 app.use(helmet());
@@ -26,8 +24,6 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-// app.use(tpd());
-// app.use(d());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

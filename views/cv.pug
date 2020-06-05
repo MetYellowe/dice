@@ -2,10 +2,14 @@ doctype html
 html(leng='en' id='h')
   head
     meta(charset='utf-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/stylesheets/cvStyle.css')
+    script(src='/javascripts/cvDirection.js')
     title Alexander Gorpinich
   body
+    img#myPhoto(src='/images/my_photo.jpg', class='my-photo-small' alt='CV-photo')
+    svg#triangle(viewBox='0 0 100 100' width='50' height='50' xmlns='http://www.w3.org/2000/svg' class='triangle-style')
+      polygon(points='0,0 100,100 0,100 0,0' fill='red' stroke='none')
+        animate(attributeType='XML' attributeName='fill' from='red' to='white' dur='5s' repeatCount='indefinite')
     span(class='h-1') Alexander Gorpinich
     span(class='h-2') Full-Stack Developer
     table(class='table-style')
@@ -31,7 +35,7 @@ html(leng='en' id='h')
       p including the use of the above to create animations and configure their interaction with neural networks.
     div(class='links-on-projects')
       p My first ended project is the browsers dice-game which I also plan to do as a mobile application use React API.
-      a(href='http://localhost:3000/') See here
+      a(href='/catalog') See here
       p At this point I also work on the chat-project for free-talking and funny pastime.
       p I have many other ideas about creating game-apps, apps for animating photos, and apps for analyzing statistical info to solve commercial tasks.
     div(class='partnership')

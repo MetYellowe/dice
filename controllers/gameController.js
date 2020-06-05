@@ -12,7 +12,8 @@ exports.gamer_create_get = function(req, res, next) {
 // Handle Gamer create on POST.
 exports.gamer_create_post = [
     // Validate that the name field is not empty.
-    body('name', 'Nickname required').trim().isLength({ min: 1 }),
+    body('name', 'Nickname must be length from 1 to 10 letters').trim().isLength({ min: 1, max: 10 }),
+    body('password', 'Password must be include Upper Case latters and numbers, total amount 6').matches(/^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/, 'i'),
 
     // Sanitize (escape) the name field.
     check('name').escape(),
@@ -33,16 +34,14 @@ exports.gamer_create_post = [
         
         if(!errors.isEmpty()) {
             // There are error. Render the form again with sanitized values/error messages.
-            res.render('title_page', { title: 'Welcom to Game! Try your luck!', gamer: gamer, erros: errors.array() });
+            res.render('title_page', { title: 'Welcom to Game! Try your luck!', gamer: gamer, errors: errors.array() });
             return;
         }
         else {
             // Data from form is valid.
             // Check if Gamer with same name already exists.
             Gamer.findOne({
-                'name': req.body.name,
-                'password': req.body.password,
-                'opponent': req.body.opponent
+                'name': req.body.name
             })
             .exec(function(err, found_gamer) {
                 if(err) {
@@ -51,8 +50,48 @@ exports.gamer_create_post = [
                 }
 
                 if(found_gamer) {
-                    // Gamer exist, go to game.
-                    res.redirect(found_gamer.url);
+                    Gamer.findOne({
+                        'password': req.body.password
+                    }).exec(function(err, found_gamer1) {
+
+                        if(err) {
+                            debug('validate on password: ' + err);
+                            return next(err);
+                        }
+
+                        if(found_gamer1) {
+                            Gamer.findOne({
+                                'password': req.body.password,
+                                'opponent': req.body.opponent
+                            }).exec(function(err, found_gamer2) {
+
+                                if(err) {
+                                    debug('validate on opponent: ' + err);
+                                    return next(err);
+                                }
+
+                                if(found_gamer2) {
+                                    // Gamer exist, go to game.
+                                    res.redirect(found_gamer2.url);
+                                }
+                                else {
+                                    gamer.save(function(err) {
+                                        if(err) {
+                                            debug('update error: ' + err);
+                                            return next(err);
+                                        }
+                                        // Gamer saved. Go to game.
+                                        res.redirect(gamer.url);
+                                    });
+                                }
+                            });
+                            
+                        }
+                        else {
+                            res.render('title_page', {message: "This Nickname is already taken"});
+                        }
+                    });
+                    
                 }
                 else {
 

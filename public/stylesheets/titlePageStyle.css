@@ -139,3 +139,14 @@ body {
   font: 20px "Comic Sans MS";
   text-decoration: none;
 }
+
+ul {
+  position: absolute;
+  top: 10px;
+  left: 480px;
+}
+
+li {
+  font: 20px "Comic Sans MS";
+  color: red;
+}

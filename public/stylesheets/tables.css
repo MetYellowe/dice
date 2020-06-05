@@ -68,6 +68,7 @@
   font-size: 50px;
   color: black;
   display: inline;
+  z-index: 1000;
 }
 .second-gamer {
   position: relative;
@@ -77,6 +78,7 @@
   font-size: 50px;
   color: white;
   display: inline;
+  z-index: 1000;
 }
 .draw {
   position: relative;
@@ -86,4 +88,5 @@
   font-size: 50px;
   color: green;
   display: inline;
+  z-index: 1000;
 }

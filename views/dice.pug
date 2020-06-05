@@ -2,7 +2,6 @@ doctype html
 html(lang='en' id='h')
   head
     meta(charset='utf-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/stylesheets/htmlBody.css')
     link(rel='stylesheet', href='/stylesheets/cube1.css')
     link(rel='stylesheet', href='/stylesheets/cube2.css')
@@ -12,8 +11,8 @@ html(lang='en' id='h')
     link(rel='stylesheet', href='/stylesheets/point.css')
     link(rel='stylesheet', href='/stylesheets/establishOfPoints.css')
     script(src='/javascripts/direction.js')
-    script(src='/controllers/d.js')
   body
+    span(id='infoMessage', class='info-message') Press Enter or click wherever
     div(id='table1', class='t1') 0
     div(id='table2', class='t2') 0
     div(id='nickPlace1', class='np1')

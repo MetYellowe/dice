@@ -13,7 +13,7 @@ exports.gamer_create_get = function(req, res, next) {
 exports.gamer_create_post = [
     // Validate that the name field is not empty.
     body('name', 'Nickname must be length from 1 to 10 letters').trim().isLength({ min: 1, max: 10 }),
-    body('password', 'Password must be include Upper Case latters and numbers').matches(/^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/, 'i'),
+    body('password', 'Password must be include Upper Case latters and numbers, total amount 6').matches(/^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/, 'i'),
 
     // Sanitize (escape) the name field.
     check('name').escape(),

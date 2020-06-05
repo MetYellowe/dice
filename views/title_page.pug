@@ -2,9 +2,9 @@ extends layout
 
 block content
   
-  h1(class='h-1') #{title}
-  h2(class='h-2') #{message}
-  ul(class='ul-error')
+  h1(class='h-1') #{title} #{message}
+  
+  ul(class='ul-style')
     //each val in errors
       each v, k in val
         if k == msg

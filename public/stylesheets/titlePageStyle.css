@@ -140,10 +140,13 @@ body {
   text-decoration: none;
 }
 
-.ul-error, li{
+ul {
   position: absolute;
-  top: 80px;
-  left: 30px;
+  top: 10px;
+  left: 480px;
+}
+
+li {
   font: 20px "Comic Sans MS";
   color: red;
 }

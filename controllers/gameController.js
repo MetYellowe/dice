@@ -7,7 +7,7 @@ var debug = require('debug')('gamer');
 
 // Display title page to enter the game.
 exports.gamer_create_get = function(req, res, next) {
-    res.render('title_page', { title: 'Welcom to Game! Try your luck!'})
+    res.render('title_page', { title: 'Welcom to Game! Try your luck!'});
 };
 // Handle Gamer create on POST.
 exports.gamer_create_post = [

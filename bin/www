@@ -8,28 +8,12 @@ var app = require('../app');
 var debug = require('debug')('dice:server');
 var http = require('http');
 
-process
-  .on('SIGTERM', shutdown('SIGTERM'))
-  .on('SIGINT', shutdown('SIGINT'))
-  .on('uncaughtException', shutdown('uncaughtException'));
-
 /**
  * Get port from environment and store in Express.
  */
 
 var port = normalizePort(process.env.NODE_ENV || '3000');
 app.set('port', port);
-
-function shutdown(signal) {
-  return (err) => {
-    console.log(`${ signal }...`);
-    if (err) console.error(err.stack || err);
-    setTimeout(() => {
-      console.log('...waited 5s, exiting.');
-      process.exit(err ? 1 : 0);
-    }, 5000).unref();
-  };
-}
 
 /**
  * Create HTTP server.

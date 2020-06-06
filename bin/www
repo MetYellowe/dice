@@ -29,6 +29,7 @@ function shutdown(signal) {
       process.exit(err ? 1 : 0);
     }, 5000).unref();
   };
+}
 
 /**
  * Create HTTP server.

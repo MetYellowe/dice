@@ -5,7 +5,7 @@ block content
   h1(class='h-1') #{title} #{message}
   
   ul(class='ul-style')
-    //each val in errors
+    each val in errors
       each v, k in val
         if k == msg
           li= v

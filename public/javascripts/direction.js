@@ -212,13 +212,17 @@ var coin = {
       }
     
     },
+    coinCount1: 0,
+    coinCount2: 0,
     createCoin1: function() {
-        if(this.ti1() == 3) {
+        if(this.ti1() == 3 && this.coinCount1 == 0) {
           soundCoin1.play();
           this.blueprintOfCoin(320);
-        } else if(this.ti1() == 6) {
+          this.coinCount1 = 6;
+        } else if(this.ti1() == 6 && this.coinCount1 == 6) {
           soundCoin1.play();
           this.blueprintOfCoin(440);
+          this.coinCount1 = 0;
         } else if(this.ti1() == 9 && this.ti2() != 9) {
           soundCoin1.play();
           this.blueprintOfCoin(560);
@@ -229,12 +233,14 @@ var coin = {
         }
     },
     createCoin2: function() {
-      if(this.ti2() == 3) {
+      if(this.ti2() == 3 && this.coinCount2 == 0) {
         soundCoin2.play();
         this.blueprintOfCoin(950);
-      } else if(this.ti2() == 6) {
+        this.coinCount2 = 6;
+      } else if(this.ti2() == 6 && this.coinCount2 == 6) {
         soundCoin2.play();
         this.blueprintOfCoin(830);
+        this.coinCount2 == 0;
       } else if(this.ti2() == 9 && this.ti1() != 9) {
         soundCoin2.play();
         this.blueprintOfCoin(710);

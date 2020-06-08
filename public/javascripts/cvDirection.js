@@ -23,9 +23,47 @@ document.addEventListener('click', listener1);
 
 var windowHeight = document.documentElement.clientHeight;
 var windowWidth = document.documentElement.clientWidth;
-window.onload = function() {
-    var divs = document.querySelectorAll('div');
-    for(var key of divs) {
-        key.style.left = windowWidth / 2 - key.clientWidth / 2 + 'px';
+
+function getOS() {
+    var userAgent = window.navigator.userAgent,
+        platform = window.navigator.platform,
+        macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+        windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+        iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+        os = null;
+  
+    if (macosPlatforms.indexOf(platform) !== -1) {
+      os = 'Mac OS';
+    } else if (iosPlatforms.indexOf(platform) !== -1) {
+      os = 'iOS';
+    } else if (windowsPlatforms.indexOf(platform) !== -1) {
+      os = 'Windows';
+    } else if (/Android/.test(userAgent)) {
+      os = 'Android';
+    } else if (!os && /Linux/.test(platform)) {
+      os = 'Linux';
     }
-};
+  
+    return os;
+  }
+
+  if(getOS() == 'iOS' || getOS() == 'Android') {
+    window.onload = function() {
+        var divs = document.querySelectorAll('div');
+        for(var key of divs) {
+            key.classList.remove('links-on-projects', 'about-me', 'partnership');
+            key.clientWidth = windowWidth + 'px';
+            key.classList.add('div-mobile-style');
+        }
+
+        var img = document.querySelector('img');
+        img.classList.remove('my-photo-small');
+        img.clientWidth = windowWidth + 'px';
+        img.clientHeight = windowHeight + 'px';
+        img.classList.add('img-mobile-style');
+
+        var svg = document.querySelector('svg');
+        svg.remove();
+
+    };
+  }

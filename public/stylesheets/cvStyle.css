@@ -32,7 +32,7 @@ td, th {
 .about-me {
     position: absolute;
     top: 270px;
-    /*left: 250px;*/
+    left: 250px;
     background-color: black;
     font: 15px "Comic Sans MS";
     color: whitesmoke;
@@ -115,4 +115,14 @@ td, th {
     animation-duration: 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+.div-mobile-style {
+    padding: 10px;
+    border: 5px solid whitesmoke;
+    text-align: center;
+}
+
+.img-mobile-style {
+    border: 5px solid whitesmoke;
 }

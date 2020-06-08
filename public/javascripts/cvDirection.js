@@ -52,14 +52,14 @@ function getOS() {
         var divs = document.querySelectorAll('div');
         for(var key of divs) {
             key.classList.remove('links-on-projects', 'about-me', 'partnership');
-            key.clientWidth = windowWidth + 'px';
+            key.style.width = windowWidth + 'px';
             key.classList.add('div-mobile-style');
         }
 
         var img = document.querySelector('img');
         img.classList.remove('my-photo-small');
-        img.clientWidth = windowWidth + 'px';
-        img.clientHeight = windowHeight + 'px';
+        img.style.width = windowWidth + 'px';
+        img.style.height = windowHeight + 'px';
         img.classList.add('img-mobile-style');
 
         var svg = document.querySelector('svg');
